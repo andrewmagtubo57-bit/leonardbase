@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="avatar">👤</div>
+
+    <!-- SIGN UP FORM -->
+    <form id="signupForm" class="hidden">
+        <h2>CREATE ACCOUNT</h2>
+
+        <input type="text" id="fullName" placeholder="FULL NAME" required>
+
+        <input type="email" id="signupEmail" placeholder="EMAIL (GMAIL)" required>
+
+        <label class="field-label" for="birthday">BIRTHDAY</label>
+        <input type="date" id="birthday" required>
+
+        <input type="tel" id="mobile" placeholder="MOBILE NUMBER (e.g. 09123456789)" required>
+
+        <input type="password" id="signupPassword"
+               placeholder="PASSWORD (8 characters minimum)"
+               minlength="8" required>
+
+        <input type="password" id="confirmPassword"
+               placeholder="CONFIRM PASSWORD"
+               minlength="8" required>
+
+        <label class="show">
+            <input type="checkbox" id="showSignupPassword">
+            Show password
+        </label>
+
+        <button type="submit" id="signupBtn">SIGN UP</button>
+
+        <p class="message" id="signupMessage"></p>
+
+        <p>Already a member?
+            <a href="#" id="showLogin">LOGIN</a>
+        </p>
+    </form>
+
+    <!-- LOGIN FORM -->
+    <form id="loginForm">
+        <h2><u>My Login form</u></h2>
+
+        <input type="email" id="loginEmail" placeholder="EMAIL (GMAIL)" required>
+
+        <input type="password" id="loginPassword" placeholder="PASSWORD" required>
+
+        <label class="show">
+            <input type="checkbox" id="showLoginPassword">
+            Show password
+        </label>
+
+        <label class="remember">
+            <input type="checkbox" id="rememberMe">
+            Remember me
+        </label>
+
+        <p class="forgot"><a href="#" id="showForgot">Forgot password?</a></p>
+
+        <button type="submit" id="loginBtn">LOGIN</button>
+
+        <p class="message" id="loginMessage"></p>
+
+        <p>Not a member?
+            <a href="#" id="showSignup">CREATE ACCOUNT</a>
+        </p>
+    </form>
+
+    <!-- FORGOT PASSWORD FORM -->
+    <form id="forgotForm" class="hidden">
+        <h2>FORGOT PASSWORD</h2>
+        <p>Enter your email and we'll send you a link to reset your password.</p>
+
+        <input type="email" id="forgotEmail" placeholder="EMAIL (GMAIL)" required>
+
+        <button type="submit" id="forgotBtn">SEND RESET LINK</button>
+
+        <p class="message" id="forgotMessage"></p>
+
+        <p><a href="#" id="backToLogin">Back to LOGIN</a></p>
+    </form>
+
+    <!-- OUTPUT AFTER LOGIN -->
+    <div id="dashboard" class="hidden">
+        <h2>LOGIN SUCCESSFUL!</h2>
+        <p>Welcome back!</p>
+
+        <div class="output">
+            <p><strong>Full Name:</strong> <span id="outputName"></span></p>
+            <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+            <p><strong>Birthday:</strong> <span id="outputBirthday"></span></p>
+            <p><strong>Mobile:</strong> <span id="outputMobile"></span></p>
+        </div>
+
+        <button type="button" id="logoutButton">LOG OUT</button>
+    </div>
+</div>
+
+<!-- type="module" is required for the Firebase SDK imports -->
+<script type="module" src="script.js"></script>
+</body>
+</html>

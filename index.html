@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+
+    <!-- Redirect to the register form -->
+    <meta http-equiv="refresh" content="0; url=app.html#signup">
+    <script>
+        window.location.replace("app.html#signup");
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #648bc9, #315b99);
+            color: white;
+            text-align: center;
+        }
+        a { color: #bce8ff; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Redirecting to the register form...<br>
+    If nothing happens, <a href="app.html#signup">click here</a>.</p>
+</body>
+</html>
